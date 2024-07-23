@@ -4,7 +4,7 @@ function redirectTo(url){
 
 // Camera
 document.querySelector(".bt-1").addEventListener("click", function(){
-    redirectTo("");
+    redirectTo("http://192.168.123.5");
 });
 
 // Temp plot
