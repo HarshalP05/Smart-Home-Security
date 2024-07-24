@@ -7,6 +7,12 @@ document.querySelector(".bt-1").addEventListener("click", function(){
     redirectTo("http://192.168.123.5");
 });
 
+// Camera
+document.querySelector(".bt-cam").addEventListener("click", function(){
+    redirectTo("/login");
+});
+
+
 // Temp plot
 document.querySelector(".bt-2").addEventListener("click", function(){
     redirectTo("/plot_aht21");

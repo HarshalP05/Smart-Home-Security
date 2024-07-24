@@ -75,3 +75,10 @@
 	padding:2px 30px;
 	margin-top: 20px;
 }
+
+.camera-feature{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+
+}

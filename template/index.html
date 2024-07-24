@@ -27,6 +27,7 @@
                 font-family: 'Saira Condensed', sans-serif;
                 font-size: 25px;
             }
+            
         </style>
     </head>
 
@@ -43,7 +44,7 @@
                   <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
                     <ul class="navbar-nav" style="display: flex; gap:60px">
                       <li class="nav-item-top">
-                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="https://smart-home-security-ypdf.vercel.app/index.html">Home</a>
                       </li>
                       <li class="nav-item-top">
                         <a class="nav-link" href="#">About</a>
@@ -76,13 +77,15 @@
                   
                     <p class="lead">A smart home with a doorbell camera, temperature and humidity sensor, and gas sensor enhances security, comfort, and safety. The doorbell camera offers remote viewing of visitors, the temperature and humidity sensor adjusts climate control for comfort and efficiency, and the gas sensor alerts to harmful gases, ensuring a safe living environment.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                      <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                      <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">View PPT about Project</button>
+                      <button type="button" class="btn btn-outline-secondary btn-lg px-4">View Official Report about Project</button>
                     </div>
                   </div>
                 </div>
               </div>
         </section>
+
+        <div class="container px-4 py-5" id="hanging-icons">
         <div class="status" id="status-container">
           <h2 class="pb-2 border-bottom">Status of Devices</h2>
           <div class="device" id="esp32_1_status">
@@ -95,6 +98,8 @@
 
             </div>
       </div>
+    </div>
+
         <!--Features-->
         <div class="container px-4 py-5" id="hanging-icons">
           <h2 class="pb-2 border-bottom">Remarkable Features</h2>
@@ -106,11 +111,14 @@
                     <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
                 </svg>
             </div>
-              <div>
+              <div class="camera-feature">
                 <h3 class="fs-2 text-body-emphasis">Camera Options</h3>
                 <p class="para">This module captures real-time video and images, allowing you to monitor and record activities in a specific area effectively. This module is compact and efficient, making it suitable for various surveillance needs.</p>
                 <a href="#" class="btn btn-primary bt-1">
                   Click here to view Camera Function
+                </a>
+                <a href="#" class="btn btn-primary bt-1">
+                  Object Detection Feature
                 </a>
               </div>
             </div>
@@ -194,20 +202,26 @@
           </div>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
-            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
-          </svg>
-        </div>
-        <div style="display: flex; flex-direction: column;">
-          <h3 class="fs-2 text-body-emphasis">Overall Sensor Plot</h3>
-          <p class="para">This plot provides a comprehensive overview of environmental conditions and sensor readings, allowing for easy comparison and analysis of different data types over time. It helps in monitoring and managing various aspects of a smart home system effectively.</p>
-          <a href="#" class="btn btn-primary bt-7" style="align-self: center;">
-            View Overall Sensor Plot
-          </a>
+
+        <div class="container px-4 py-5" id="hanging-icons">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+              <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis">Overall Sensor Plot</h3>
+            <p class="para">This plot provides a comprehensive overview of environmental conditions and sensor readings, allowing for easy comparison and analysis of different data types over time. It helps in monitoring and managing various aspects of a smart home system effectively.</p>
+            <a href="#" class="btn btn-primary bt-6">
+              View Overall Sensor Plot
+            </a>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+
         <!--Example Dashboard-->
         <section id="dash">
           <h3>Readings Taken During Live Demo</h3>
@@ -268,7 +282,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-        <script src=""></script>
+        <script src="https://smart-home-security-ypdf.vercel.app/script.js"></script>
 
     </body>
 </html>
