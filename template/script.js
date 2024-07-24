@@ -44,34 +44,31 @@ document.querySelector(".bt-overall").addEventListener("click", function(){
 
 
 // ESP online check
-function checkStatus() {
+function updateStatus() {
     fetch('/esp32_status')
         .then(response => response.json())
         .then(data => {
-            const esp32_1_status = document.getElementById('esp32_1_status_text');
-            const esp32_1_indicator = document.getElementById('esp32_1_indicator');
-            const esp32_2_status = document.getElementById('esp32_2_status_text');
-            const esp32_2_indicator = document.getElementById('esp32_2_indicator');
+            for (const [device, status] of Object.entries(data)) {
+                const deviceElement = document.getElementById(`${device}_status`);
+                const statusText = document.getElementById(`${device}_status_text`);
+                const indicator = deviceElement.querySelector('.indicator');
 
-            if (data.esp32_1) {
-                esp32_1_status.textContent = 'Online';
-                esp32_1_indicator.className = 'indicator online';
-            } else {
-                esp32_1_status.textContent = 'Offline';
-                esp32_1_indicator.className = 'indicator offline';
-            }
-
-            if (data.esp32_2) {
-                esp32_2_status.textContent = 'Online';
-                esp32_2_indicator.className = 'indicator online';
-            } else {
-                esp32_2_status.textContent = 'Offline';
-                esp32_2_indicator.className = 'indicator offline';
+                if (status === 'online') {
+                    statusText.textContent = 'Online';
+                    indicator.classList.add('online');
+                    indicator.classList.remove('offline');
+                } else {
+                    statusText.textContent = 'Offline';
+                    indicator.classList.add('offline');
+                    indicator.classList.remove('online');
+                }
             }
         })
-        .catch(error => console.error('Error fetching status:', error));
+        .catch(error => {
+            console.error('Error fetching status:', error);
+        });
 }
-
-setInterval(checkStatus, 5000);
+// Update status every 5 seconds
+setInterval(updateStatus, 5000);
 // Initial update
 updateStatus();
