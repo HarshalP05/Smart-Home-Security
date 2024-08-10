@@ -59,6 +59,9 @@
     <h1>AHT21 Sensor Data</h1>
     <div>
         <h2>Status: <span id="status-indicator" class="status-indicator offline"></span></h2>
+        <a class="button-40" href="/"> BACK HOME</a> 
+        <a class="button-40" href="/plot_aht21">View AHT21 Plot</a>
+    </div>
     </div>
     <h2>Temperature Data</h2>
     <div id="temperature-table"></div>
@@ -66,7 +69,7 @@
     <h2>Humidity Data</h2>
     <div id="humidity-table"></div>
 
-    <a class="button-40" href="/plot_aht21">View AHT21 Plot</a>
+    
 
     <script>
         let lastUpdate = null;
@@ -131,7 +134,7 @@
 
         function checkStatus() {
             const now = new Date();
-            if (lastUpdate && (now - lastUpdate) > 60000) {  // 60 seconds
+            if (lastUpdate && (now - lastUpdate) > 10000) {  // 10 seconds
                 document.getElementById('status-indicator').classList.remove('online');
                 document.getElementById('status-indicator').classList.add('offline');
             }
